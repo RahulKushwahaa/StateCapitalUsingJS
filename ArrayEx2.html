@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StateCapital</title>
+    <script>
+        var data=[
+                    ["01.","Bihar","Patna","Nitish Kumar","Phagu Chauhan"],
+                    ["02.","Uttar Pradesh","Lucknow","Shri Yogi Adityanath","Anandiben Patel"],
+                    ["03.","Andhra Pradesh","Hyderabad (Amaravati)","Y.S. Jagan Mohan Reddy","Biswabhusan Harichandan"],
+                    ["04.","Arunachal Pradesh","Itanagar","Pema Khandu","B.D. Mishra"],
+                    ["05.","Assam","Dishpur","Himanta Biswa Sarma","Jagdish Mukhie"],
+                    ["06.","Chhattisgarh","Raipur","Bhupesh Baghel","Ms. Anusuiya Uikey"],
+                    ["07.","Goa","Panaji","Dr. Pramod Sawant","P.S. Sreedharan Pillai"],
+                    ["08.","Gujarat","Gandhinagar","Bhupendra Patel","Acharya Devvrat"],
+                    ["09.","Haryana","Chandigarh","Shri Manohar Lal","Shri Bandaru Dattatreya"],
+                    ["10.","Himachal Pradesh","Shimla","Jai Ram Thakur","Rajendra Arlekar"],
+                    ["11.","Jammu & Kashmir","Srinagar","Mehbooba Mufti","Manoj Kumar"],
+                    ["12.","Jharkhand","Ranchi","Shri Hemant Soren","Shri Ramesh Bais"],
+                    ["13.","Karnataka","Bengaluru","Basavaraj Bommai","Thawar Chand Gehlot"],
+                    ["14.","Kerala","Thiruvananthapuram","Pinarayi Vijayan","Arif Mohammad Khan"],
+                    ["15.","Madhya Pradesh","Bhopal","Shivraj Singh Chouhan","Mangubhai C. Patel"],
+                    ["16.","Maharashtra","Mumbai","Eknath Shinde","Bhagat Singh Koshyari"],
+                    ["17.","Manipur","Imphal","N. Biren Singh","La Ganesan"],
+                    ["18.","Meghalaya","Shillong","Shri Conrad Sangma","Satya Pal Malik"],
+                    ["19.","Mizoram","Aizawl","Zoramthanga","K. Hari Babu"],
+                    ["20.","Nagaland","Kohima","Neiphiu Rio","Shri Jagdish Mukhie"],
+                    ["21.","Odisha","Bhubaneshwar","Naveen Patnaik","Ganeshi Lal Mathur"],
+                    ["22.","Punjab","Chandigarh","Bhagwant Mann","Banwarilal Purohit"],
+                    ["23.","Rajasthan","Jaipur","Ashok Gehlot","Shri Kalraj Mishra"],
+                    ["24.","Sikkim","Gangtok","Prem Singh Tamang","Ganga Prasad"],
+                    ["25.","Tamil Nadu","Chennai","M.K. Stalin","Ravindra Narayana Ravi"],
+                    ["26.","Telangana","Hyderabad","Kalvakuntla Chandrashekar Rao","Tamilisai Soundararajan"],
+                    ["27.","Tripura","Agartala","Manik Saha","Satyadev Narayan Arya"],
+                    ["28.","Uttarakhand","Dehradun","Pushkar Singh Dhami","Gurmit Singh"],
+                    ["29.","West Bangal","West Bangal","Mamata Banerjeein","Jagdeep Dhankhar"]
+
+                ];
+                function showdata()
+                {
+                    var tbody=document.getElementById("StateCapitalTableBody");
+                    for(let i=0;i<data.length;i++)
+                    {
+                        let row=document.createElement("tr");
+                        for(let j=0;j<data[i].length;j++)
+                        {
+                            let td=document.createElement("td");
+                            let textnode=document.createTextNode(data[i][j]);
+                            td.append(textnode);
+                            row.append(td);
+                        }
+                        tbody.append(row);
+                    }
+                }
+    </script>
+</head>
+<body onload="showdata();">
+    <h1 style="text-align: center; color: red; border-radius: 10%; font-family:Lucida Calligraphy; border-style: solid; background: linear-gradient( rgb(0, 255, 38), yellow,  rgb(247, 0, 255));" >State, Capital, Chief-Minister and Governor name</h1>
+    <table width="100%" border="9px">
+        <thead style="font-size: x-large; color: red; background-color:rgb(0, 255, 217);">
+            <tr>
+                <th>Sr.No.</th>
+                <th>State</th>
+                <th>Capital</th>
+                <th>Chief-Minister</th>
+                <th>Governor</th>
+            </tr>
+        </thead>
+        <tbody id="StateCapitalTableBody" style="background-color: aquamarine; font-size: large; font-weight: bold; text-align: center;">
+
+        </tbody>
+    </table>
+    
+</body>
+</html>
